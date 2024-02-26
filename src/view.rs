@@ -12,10 +12,24 @@ use std::io;
 
 #[derive(Debug)]
 pub struct FileView {
-    hex: Vec<(usize, u8)>,
+    file: Vec<usize>,
     cursor_pos: usize,
     bytes_per_line: usize,
 }
+
 impl FileView {
-    pub fn draw(&self, f: &mut Frame) {}
+    pub new(file: Vec<usize>) -> Self {
+       Self {
+          file: file,
+          cursor_pos: 0,
+          bytes_per_line: 0
+       };
+    }
+    pub fn run(&mut self) -> io::Result<(), Box<dyn std::io::Error>> {
+
+    }
+
+    pub fn draw(&self, f: &mut Frame) {
+
+    }
 }
