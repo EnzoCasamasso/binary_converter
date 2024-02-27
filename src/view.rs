@@ -25,6 +25,7 @@ impl FileView {
           bytes_per_line: 0
        };
     }
+
     pub fn run(&mut self) -> io::Result<(), Box<dyn std::io::Error>> {
 
     }
