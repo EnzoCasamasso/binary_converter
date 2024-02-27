@@ -18,19 +18,15 @@ pub struct FileView {
 }
 
 impl FileView {
-    pub new(file: Vec<usize>) -> Self {
-       Self {
-          file: file,
-          cursor_pos: 0,
-          bytes_per_line: 0
-       };
+    pub fn new(file: Vec<usize>) -> Self {
+        Self {
+            file: file,
+            cursor_pos: 0,
+            bytes_per_line: 0,
+        }
     }
 
-    pub fn run(&mut self) -> io::Result<(), Box<dyn std::io::Error>> {
+    pub fn run(&mut self) -> io::Result<(), Box<dyn std::io::Error>> {}
 
-    }
-
-    pub fn draw(&self, f: &mut Frame) {
-
-    }
+    pub fn draw(&self, f: &mut Frame) {}
 }
